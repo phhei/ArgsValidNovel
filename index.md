@@ -1,8 +1,8 @@
 # Shared task on predicting validity and novelty of arguments
 
-In recent years, there has been increased interest in understanding how to assess the quality of arguments systematically. Wachsmuth et al. [4] proposed a framework for quality assessment consisting of the following top dimensions: logic, rhetoric, and dialectic. Regarding the dimension of logic, there has been some work (e.g. on detecting sufficiency by Gurcke et al. [2]) to assess the quality of an argument or conclusion automatically.
+In recent years, there has been increased interest in understanding how to assess the quality of arguments systematically. [Wachsmuth et al.](https://aclanthology.org/E17-1017) proposed a framework for quality assessment consisting of the following top dimensions: logic, rhetoric, and dialectic. Regarding the dimension of logic, there has been some work to assess the quality of an argument or conclusion automatically.
 
-Recently, there has also been interest in generation conclusions or arguments ([2, 3]). In order to guide the process of automatically generating a conclusion, our assumption is that we might need metrics that can be automatically computed to estimate the suitability and quality  of a certain conclusion. Two important metrics/objectives are that the conclusion is **valid**, that is, that the conclusion “follows” from the premise. At the same time, it is easy to produce conclusions that “follow” from the premise by repeating (parts of) the premise in the conclusion, trivially generating a “valid” but vacuous conclusion. In this sense, it is important to assess whether conclusions/arguments are not only valid, but also **novel**.
+Recently, there has also been interest in generation conclusions or arguments. In order to guide the process of automatically generating a conclusion, our assumption is that we might need metrics that can be automatically computed to estimate the suitability and quality  of a certain conclusion. Two important metrics/objectives are that the conclusion is **valid**, that is, that the conclusion “follows” from the premise. At the same time, it is easy to produce conclusions that “follow” from the premise by repeating (parts of) the premise in the conclusion, trivially generating a “valid” but vacuous conclusion. In this sense, it is important to assess whether conclusions/arguments are not only valid, but also **novel**.
 
 We define **validity** as requiring the existence of logical inferences that link the premise to the conclusion. In contrast, **novelty** requires the presence of novel _premise-related_ content and/or combination of the content in the premises in a way that goes beyond what is stated in the premise. Hence, a conclusion that is valid but not novel could be a repetition, a paraphrase or a summary of the premise, and only a novel conclusion offers a piece of information that extends what is already covered by the premise – whether it supports or contests the premise.
 
@@ -26,7 +26,16 @@ Given a premise and a conclusion in natural language, the task is to predict:
 
 Hence, we expect two binary decisions as output.
 
-#### Example
+#### Example: Wind energy
+
+Premise: Unlike many other forms of energy generation, wind generators do not require the cycling of water for cooling or as the medium for transferring heat energy into usable electric energy (such as with coal or gas).	
+
+| **Conclusion** | **Validity** | **Novelty** |
+|------------|----------|---------|
+| Wind energy does not require transferring heat into electricity. | no | no |
+| Wind energy does not require water as a medium | yes | no |
+| Wind energy requires very little energy | no | yes |
+| Wind energy has several advantages in comparison to conventional energies. | yes | yes |
 
 #### Datasets & Evaluation
 
@@ -39,7 +48,14 @@ Given a premise and two conclusions A and B in natural language, the task is to 
 
 There are three possible labels for this task: better/worse/tie.
 
-#### Example
+#### Example: Wind energy
+
+Premise: Unlike many other forms of energy generation, wind generators do not require the cycling of water for cooling or as the medium for transferring heat energy into usable electric energy (such as with coal or gas).	
+
+| **Conclusion A** | **Conclusion B** | **Validity** | **Novelty** |
+|--------------|--------------|----------|---------|
+| Wind energy does not require transferring heat into electricity. |  Wind energy does not require a cooling system. | A = B | A < B |
+| Wind energy requires no heating/cooling. | Wind energy does not require a cooling system. | A < B | A = B |
 
 #### Datasets & Evaluation
 

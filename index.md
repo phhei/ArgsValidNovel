@@ -67,8 +67,8 @@ _coming soon_
 
 ### Timeline
 
-- 05.08.22: Test data without labels is released
-- 12.08.22: Final submission of teams of results on test data
+- 15.08.22: Test data without labels is released
+- 19.08.22: Final submission of teams of results on test data
 - 26.08.22: Publication of overall results of the task
 - 15.09.22: Paper for proceedings with task description ready
 

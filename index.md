@@ -67,12 +67,10 @@ _coming soon_
 
 ### Timeline
 
-- End of Mai: release ot task description and data on a website for the task
-- June-Beginning of August: Teams work on their solutions
-- Beginning of August: Test data without labels is released
-- Mid of August: Final submission of teams of results on test data
-- End of August: Publication of overall results of the task
-- Mid-September: Paper for proceedings with task description ready
+- 05.08.22: Test data without labels is released
+- 12.08.22: Final submission of teams of results on test data
+- 26.08.22: Publication of overall results of the task
+- 15.09.22: Paper for proceedings with task description ready
 
 ### Terms and Conditions
 
@@ -81,7 +79,8 @@ By participating in this task you agree to these terms and conditions. If, howev
 - By submitting results to this competition, you consent to the public release of your scores at this website and at ArgMining-2022 workshop and in the associated proceedings, at the task organizers' discretion. Scores may include, but are not limited to, automatic and manual quantitative judgements, qualitative judgements, and such other metrics as the task organizers see fit. You accept that the ultimate decision of metric choice and score value is that of the task organizers.
 - You further agree that the task organizers are under no obligation to release scores and that scores may be withheld if it is the task organizers' judgement that the submission was incomplete, erroneous, deceptive, or violated the letter or spirit of the competition's rules. Inclusion of a submission's scores is not an endorsement of a team or individual's submission, system, or science.
 - A participant can be involved in exactly one team (no more). If there are reasons why it makes sense for you to be on more than one team, then email us before the evaluation period begins. In special circumstances this may be allowed.
-  - There is only submission allowed per team and per subtask. The submission must be uploaded in the provided website. You are allowed to overwrite your final submission anytime until the final deadline
+  - There are up to 5 submissions from different approaches allowed per team and per subtask. The submission must be uploaded in the provided website. You are allowed to withdraw submission anytime until the final deadline
+  - You must not use any data from the development split as training instances. You must not use any test instance in the training of the model (also not indirectly for model selection). Approaches that violate this data separation are disqualified.
 - Once the competition is over, we will release the gold labels and you will be able to determine results on various system variants you may have developed. We encourage you to report results on all of your systems (or system variants) in the system-description paper. However, we will ask you to clearly indicate the result of your official submission.
   - We will make the final submissions of the teams public at some point after the evaluation period.
   - The organizers and their affiliated institutions makes no warranties regarding the datasets provided, including but not limited to being correct or complete. They cannot be held liable for providing access to the datasets or the usage of the datasets.

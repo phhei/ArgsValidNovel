@@ -93,6 +93,8 @@ _coming soon_
 
 ## Task Organizers
 
+Newsletter/ Google-Group: https://groups.google.com/g/argmining2022-shared-task
+
 - Bielefeld University
   - **Philipp Heinisch: pheinisch@techfak.uni-bielefeld.de**
   - Philipp Cimiano: cimiano@cit-ec.uni-bielefeld.de

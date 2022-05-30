@@ -2,7 +2,7 @@
 
 In recent years, there has been increased interest in understanding how to assess the quality of arguments systematically. [Wachsmuth et al.](https://aclanthology.org/E17-1017) proposed a framework for quality assessment consisting of the following top dimensions: logic, rhetoric, and dialectic. Regarding the dimension of logic, there has been some work to assess the quality of an argument or conclusion automatically.
 
-Recently, there has also been interest in generation conclusions or arguments. In order to guide the process of automatically generating a conclusion, our assumption is that we might need metrics that can be automatically computed to estimate the suitability and quality  of a certain conclusion. Two important metrics/objectives are that the conclusion is **valid**, that is, that the conclusion “follows” from the premise. At the same time, it is easy to produce conclusions that “follow” from the premise by repeating (parts of) the premise in the conclusion, trivially generating a “valid” but vacuous conclusion. In this sense, it is important to assess whether conclusions/arguments are not only valid, but also **novel**.
+Recently, there has also been interest in the generation of conclusions or arguments. In order to guide the process of automatically generating a conclusion, our assumption is that we might need metrics that can be automatically computed to estimate the suitability and quality  of a certain conclusion. Two important metrics/objectives are that the conclusion is **valid**, that is, that the conclusion “follows” from the premise. At the same time, it is easy to produce conclusions that “follow” from the premise by repeating (parts of) the premise in the conclusion, trivially generating a “valid” but vacuous conclusion. In this sense, it is important to assess whether conclusions/arguments are not only valid, but also **novel**.
 
 We define **validity** as requiring the existence of logical inferences that link the premise to the conclusion. In contrast, **novelty** requires the presence of novel _premise-related_ content and/or combination of the content in the premises in a way that goes beyond what is stated in the premise. Hence, a conclusion that is valid but not novel could be a repetition, a paraphrase or a summary of the premise, and only a novel conclusion offers a piece of information that extends what is already covered by the premise – whether it supports or contests the premise.
 
@@ -13,7 +13,7 @@ We define **validity** as requiring the existence of logical inferences that lin
 We divide the task of Validity-Novelty-Prediction into two subtasks.
 
 1. Task A: The first task consists of a binary classification task along the dimensions of novelty and validity, classifying a conclusion as being valid/novel or not given a textual premise. 
-1. Task B: The second subtask will consist in classifying the degree to which a conclusion is valid / novel as a regression task. 
+1. Task B: The second subtask will consist a comparinson of two conclusions in terms of validty / novelty 
 
 Participants can choose whether to address Task A or Task B, or both.
 
@@ -68,7 +68,7 @@ _coming soon_
 ### Timeline
 
 - 15.08.22: Test data without labels is released
-- 19.08.22: Final submission of teams of results on test data
+- 19.08.22: Final submission of team results on test data
 - 26.08.22: Publication of overall results of the task
 - 15.09.22: Paper for proceedings with task description ready
 
@@ -79,7 +79,7 @@ By participating in this task you agree to these terms and conditions. If, howev
 - By submitting results to this competition, you consent to the public release of your scores at this website and at ArgMining-2022 workshop and in the associated proceedings, at the task organizers' discretion. Scores may include, but are not limited to, automatic and manual quantitative judgements, qualitative judgements, and such other metrics as the task organizers see fit. You accept that the ultimate decision of metric choice and score value is that of the task organizers.
 - You further agree that the task organizers are under no obligation to release scores and that scores may be withheld if it is the task organizers' judgement that the submission was incomplete, erroneous, deceptive, or violated the letter or spirit of the competition's rules. Inclusion of a submission's scores is not an endorsement of a team or individual's submission, system, or science.
 - A participant can be involved in exactly one team (no more). If there are reasons why it makes sense for you to be on more than one team, then email us before the evaluation period begins. In special circumstances this may be allowed.
-  - There are up to 5 submissions from different approaches allowed per team and per subtask. The submission must be uploaded in the provided website. You are allowed to withdraw submission anytime until the final deadline
+  - There are up to 5 submissions from different approaches allowed per team and per subtask. The submission must be uploaded in the provided website. You are allowed to withdraw submission at anytime until the final deadline
   - You must not use any data from the development split as training instances. You must not use any test instance in the training of the model (also not indirectly for model selection). Approaches that violate this data separation are disqualified.
 - Once the competition is over, we will release the gold labels and you will be able to determine results on various system variants you may have developed. We encourage you to report results on all of your systems (or system variants) in the system-description paper. However, we will ask you to clearly indicate the result of your official submission.
   - We will make the final submissions of the teams public at some point after the evaluation period.
@@ -93,10 +93,10 @@ _coming soon_
 
 ## Task Organizers
 
-Newsletter/ Google-Group: https://groups.google.com/g/argmining2022-shared-task
+Newsletter/ Google-Group: <https://groups.google.com/g/argmining2022-shared-task>
 
 - Bielefeld University
-  - **Philipp Heinisch: pheinisch@techfak.uni-bielefeld.de**
+  - Philipp Heinisch: pheinisch@techfak.uni-bielefeld.de _(main organizer + contact person)_
   - Philipp Cimiano: cimiano@cit-ec.uni-bielefeld.de
 - Heidelberg University
   - Anette Frank: frank@cl.uni-heidelberg.de

@@ -39,6 +39,11 @@ Premise: Unlike many other forms of energy generation, wind generators do not re
 
 #### Datasets & Evaluation
 
+- Train: _coming soon_
+  - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
+- Dev: _coming soon_
+- Test: _coming soon_ (01.08.22)
+
 ### Subtask B: recognizing relative validity / novelty
 
 Given a premise and two conclusions A and B in natural language, the task is to predict:
@@ -59,6 +64,11 @@ Premise: Unlike many other forms of energy generation, wind generators do not re
 
 #### Datasets & Evaluation
 
+- Train: _coming soon_
+  - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
+- Dev: _coming soon_
+- Test: _coming soon_ (01.08.22)
+
 ---
 
 ## Orgainisation & Submission
@@ -67,10 +77,10 @@ _coming soon_
 
 ### Timeline
 
-- 15.08.22: Test data without labels is released
-- 19.08.22: Final submission of team results on test data
-- 26.08.22: Publication of overall results of the task
-- 15.09.22: Paper for proceedings with task description ready
+- 01.08.22: Test data without labels is released
+- 05.08.22: Final submission of team results on test data
+- 08.08.22: Publication of overall results of the task
+- 05.09.22: Paper for proceedings with task description ready
 
 ### Terms and Conditions
 

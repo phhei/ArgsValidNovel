@@ -79,7 +79,7 @@ _coming soon_
 
 - 01.08.22: Test data without labels is released
 - 05.08.22: Final submission of team results on test data
-- 08.08.22: Publication of overall results of the task
+- (until) 12.08.22: Publication of overall results of the task
 - 05.09.22: Paper for proceedings with task description ready
 
 ### Terms and Conditions

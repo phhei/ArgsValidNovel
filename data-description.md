@@ -17,7 +17,7 @@ Each line consists following fields:
    1. "very confident": all three annotators agree in the validity-judgement
    2. "confident": two out of three annotators agree in the validity-judgment while one annotator abstains
    3. "majority": two out of three annotators agree in the validity-judgement, one disagrees
-   4. "defeasible": there is no majority in votes - either all three annotators can't decide a validity rating or one annotator cam't decide an the two others disagree each other (probably a very subjective sample)
+   4. "defeasible": there is no majority in votes - either all three annotators can't decide a validity rating or one annotator can't decide and the two others disagree each other (probably a very subjective sample)
 6. Novelty
    1. 1 means: conclusion is novel
    2. 0 means: conclusion is somewhat novel/ borderline case (this is not an own class itself - you are free to exclude such samples)

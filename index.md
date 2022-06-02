@@ -26,16 +26,16 @@ Given a premise and a conclusion in natural language, the task is to predict:
 
 Hence, we expect two binary decisions as output.
 
-#### Example: Wind energy
+#### Example: US health care reform
 
-Premise: Unlike many other forms of energy generation, wind generators do not require the cycling of water for cooling or as the medium for transferring heat energy into usable electric energy (such as with coal or gas).	
+Premise: There is a lot to like in the bill. The Congressional Budget Office estimates that it would cover more than 30 million of the uninsured and would, by 2019, result in 94 percent of all citizens and legal residents below Medicare age having health insurance. That is a big improvement from the current 83 percent.
 
 | **Conclusion** | **Validity** | **Novelty** |
 |------------|----------|---------|
-| Wind energy does not require transferring heat into electricity. | no | no |
-| Wind energy does not require water as a medium | yes | no |
-| Wind energy requires very little energy | no | yes |
-| Wind energy has several advantages in comparison to conventional energies. | yes | yes |
+| Health care reform is still valuable without public option | no | no |
+| The bill would cover more than 30 million of the uninsured people | yes | no |
+| Health insurance mandates are a welcome boost | no | yes |
+| Health care reform is good for the uninsured | yes | yes |
 
 #### Datasets & Evaluation
 
@@ -55,14 +55,14 @@ Given a premise and two conclusions A and B in natural language, the task is to 
 
 There are three possible labels for this task: better/worse/tie.
 
-#### Example: Wind energy
+#### Example: US offshore oil drilling	
 
-Premise: Unlike many other forms of energy generation, wind generators do not require the cycling of water for cooling or as the medium for transferring heat energy into usable electric energy (such as with coal or gas).	
+Premise: These large ships release significant pollution into the oceans, and carry some risk of hitting the shore, and causing a spill.
 
 | **Conclusion A** | **Conclusion B** | **Validity** | **Novelty** |
 |--------------|--------------|----------|---------|
-| Wind energy does not require transferring heat into electricity. |  Wind energy does not require a cooling system. | A = B | A < B |
-| Wind energy requires no heating/cooling. | Wind energy does not require a cooling system. | A < B | A = B |
+| Transporting offshore oil to shores by ship has environmental costs. | Need for water does not qualify water as a right. | A > B | A > B |
+| Oil drilling releases significant pollutants into the ocean | Transporting offshore oil to shores by ship has environmental costs. | A = B | A < B |
 
 #### Datasets & Evaluation
 

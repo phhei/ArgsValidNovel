@@ -34,7 +34,7 @@ Each line consists following fields:
 
 Each line consists following fields:
 
-1. topic: : title of the debate
+1. topic: title of the debate
 2. Premise
 3. Conclusion 1
 4. Conclusion 2
@@ -57,8 +57,8 @@ Each line consists following fields:
 
 - the vote distribution is just additional information - you are free to consider it or not. You do have not to predict the distribution
 - the test set also contains ties (in terms of validity/ novelty). Hence, there are three predictable classes per validity and novelty (worse, tie, better)
-- this is a symmetric task. This means that if Conclusion A is better in Y than Conclusion B, B is also worse in Y than Conclusion A (ties are analogies). However, we include only one direction in the provided datasets, not both
-- you're free to extend the provided datasets with additional samples from Subtask A (we do not provide each conclusion combination in the datasets in this subtask). Please notice three things if you do that:
+- this is a symmetric task. This means that if Conclusion A is better in Y than Conclusion B, B is also worse in Y than Conclusion A (ties are analogical). However, we include only one direction in the provided datasets, not both
+- you're free to extend the provided datasets, for example with additional samples from Subtask A (we do not provide each conclusion combination in the datasets in this subtask). Please notice three things if you do that:
   - if you extend the datasets, please provide this information later on in the submission form of your results
   - please beware: if two Conclusions received the same validity and/or novelty judgment (of course, given the same premise), you **can not** infer that both conclusions are equally valid and/or novel. Still, one conclusion can be (but have not to be) better in terms of validity and/ or novelty
   - please do not mix the different splits. If you want to extend the training split, you're not allowed to use the dev- or test-split from subtask A. If you want to extend the dev-split, you're not allowed to use the train- or test-split from subtask A

@@ -39,9 +39,11 @@ Premise: Unlike many other forms of energy generation, wind generators do not re
 
 #### Datasets & Evaluation
 
-- Train: _coming soon_
+Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/data-description.md) beforehand.
+
+- Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
-- Dev: _coming soon_
+- Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
 - Test: _coming soon_ (01.08.22)
 
 ### Subtask B: recognizing relative validity / novelty
@@ -64,9 +66,11 @@ Premise: Unlike many other forms of energy generation, wind generators do not re
 
 #### Datasets & Evaluation
 
-- Train: _coming soon_
+Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/data-description.md) beforehand.
+
+- Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
-- Dev: _coming soon_
+- Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_dev.csv)
 - Test: _coming soon_ (01.08.22)
 
 ---

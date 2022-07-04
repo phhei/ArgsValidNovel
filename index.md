@@ -26,16 +26,16 @@ Given a premise and a conclusion in natural language, the task is to predict:
 
 Hence, we expect two binary decisions as output.
 
-#### Example: US health care reform
+#### Example: Vegetarism
 
-Premise: There is a lot to like in the bill. The Congressional Budget Office estimates that it would cover more than 30 million of the uninsured and would, by 2019, result in 94 percent of all citizens and legal residents below Medicare age having health insurance. That is a big improvement from the current 83 percent.
+Premise: The notion of man's dominion over animals need not be thought of as a blank check for man to exploit animals. Indeed, it may be appropriate to connect the notion of "dominion" to stewardship" over animals. Yet, humans can be good stewards of animals while continuing to eat them. It is merely necessary that humans maintain balance, order, and sustainability in the animal kingdom. But, again, this does not require the abandonment of meat-eating.
 
 | **Conclusion** | **Validity** | **Novelty** |
 |------------|----------|---------|
-| Health care reform is still valuable without public option | no | no |
-| The bill would cover more than 30 million of the uninsured people | yes | no |
-| Health insurance mandates are a welcome boost | no | yes |
-| Health care reform is good for the uninsured | yes | yes |
+| Two-party systems are more stable | no | no |
+| Man's "dominion" over animals does not imply abandoning meat. | yes | no |
+| The idea of "domiminism" is unnecessary. | no | yes |
+| Dominion over animals can and should be used responsibly | yes | yes |
 
 #### Datasets & Evaluation
 

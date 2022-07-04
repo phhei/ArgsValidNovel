@@ -46,6 +46,8 @@ Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
 - Test: _coming soon_ (01.08.22)
 
+**Evaluation:** we consider the _f1_macro_-score calculated by the Python-method [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/eval-metric.py). The (predicted) values for validity and novelty can be continuous. In any case, the values for validity and novelty must be in the range of 0 (aspect not fulfilled) to 1 (aspect fulfilled).
+
 ### Subtask B: recognizing relative validity / novelty
 
 Given a premise and two conclusions A and B in natural language, the task is to predict:
@@ -72,6 +74,14 @@ Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_dev.csv)
 - Test: _coming soon_ (01.08.22)
+
+**Evaluation:** We require follwing format for each instance for each aspect (validity/ novelty).
+
+- -1: A>B: Conclusion A is more (valid/ novel)
+- 0: A=B: Conclusion A and B are equalliy valid/ novel
+- 1: A<B: Conclusion B is more  (valid/ novel)
+
+We consider the _f1_macro_-score averaging the _f1_-score of all 3x3 classes ((-1, -1), (-1, 0), (-1, 1), (0, -1), ..., (1, 1)).
 
 ---
 

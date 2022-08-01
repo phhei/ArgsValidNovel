@@ -1,7 +1,3 @@
-layout: page
-title: "Submission information"
-permalink: /submit/
-
 # How to submit
 
 In order to keep it simple, we ask you to write an e-mail to <pheinisch@techfak.uni-bielefeld.de> with <opitz@cl.uni-heidelberg.de> in Cc. We ask to contribute exactly one approach per e-mail. If you have developed several approaches/ systems, write multiple e-mails, one e-mail for one approach/ system.

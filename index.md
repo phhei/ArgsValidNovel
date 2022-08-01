@@ -39,12 +39,12 @@ Premise: The notion of man's dominion over animals need not be thought of as a b
 
 #### Datasets & Evaluation
 
-Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/data-description.md) beforehand.
+Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-description) beforehand.
 
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
-- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test-without-labels.csv) => [submit](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/submission.md)
+- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test-without-labels.csv) => [submit](https://phhei.github.io/ArgsValidNovel/submission)
 
 **Evaluation:** we consider the _f1_macro_-score calculated by the Python-method [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/eval-metric.py). The (predicted) values for validity and novelty can be continuous. In any case, the values for validity and novelty must be in the range of 0 (aspect not fulfilled) to 1 (aspect fulfilled).
 
@@ -68,12 +68,12 @@ Premise: These large ships release significant pollution into the oceans, and ca
 
 #### Datasets & Evaluation
 
-Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/data-description.md) beforehand.
+Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-description) beforehand.
 
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_dev.csv)
-- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test-without-labels.csv) => [submit](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/submission.md)
+- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test-without-labels.csv) => [submit](https://phhei.github.io/ArgsValidNovel/submission)
 
 **Evaluation:** We require follwing format for each instance for each aspect (validity/ novelty).
 

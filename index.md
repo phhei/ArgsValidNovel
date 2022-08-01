@@ -44,7 +44,7 @@ Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
-- Test: _coming soon_ (01.08.22)
+- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test-without-labels.csv)
 
 **Evaluation:** we consider the _f1_macro_-score calculated by the Python-method [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/eval-metric.py). The (predicted) values for validity and novelty can be continuous. In any case, the values for validity and novelty must be in the range of 0 (aspect not fulfilled) to 1 (aspect fulfilled).
 
@@ -73,7 +73,7 @@ Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_dev.csv)
-- Test: _coming soon_ (01.08.22)
+- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test-without-labels.csv)
 
 **Evaluation:** We require follwing format for each instance for each aspect (validity/ novelty).
 

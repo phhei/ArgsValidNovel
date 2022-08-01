@@ -44,7 +44,7 @@ Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
-- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test-without-labels.csv)
+- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test-without-labels.csv) => [submit](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/submission.md)
 
 **Evaluation:** we consider the _f1_macro_-score calculated by the Python-method [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/eval-metric.py). The (predicted) values for validity and novelty can be continuous. In any case, the values for validity and novelty must be in the range of 0 (aspect not fulfilled) to 1 (aspect fulfilled).
 
@@ -73,7 +73,7 @@ Please read the [Data Description](https://github.com/phhei/ArgsValidNovel/blob/
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_dev.csv)
-- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test-without-labels.csv)
+- Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test-without-labels.csv) => [submit](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/submission.md)
 
 **Evaluation:** We require follwing format for each instance for each aspect (validity/ novelty).
 
@@ -103,7 +103,7 @@ By participating in this task you agree to these terms and conditions. If, howev
 - By submitting results to this competition, you consent to the public release of your scores at this website and at ArgMining-2022 workshop and in the associated proceedings, at the task organizers' discretion. Scores may include, but are not limited to, automatic and manual quantitative judgements, qualitative judgements, and such other metrics as the task organizers see fit. You accept that the ultimate decision of metric choice and score value is that of the task organizers.
 - You further agree that the task organizers are under no obligation to release scores and that scores may be withheld if it is the task organizers' judgement that the submission was incomplete, erroneous, deceptive, or violated the letter or spirit of the competition's rules. Inclusion of a submission's scores is not an endorsement of a team or individual's submission, system, or science.
 - A participant can be involved in one team. Participating in more than one team is not recommended, but not forbidden (if the person does not apply the same approach in different teams)
-  - There are up to 5 submissions from different approaches allowed per team and per subtask. The submission must be uploaded in the provided website. You are allowed to withdraw submission at anytime until the final deadline
+  - There are up to 5 submissions from different approaches (systems) allowed per team and per subtask. [The submission must be submitted via e-mail](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/submission.md). You are allowed to withdraw your submission at anytime until the final deadline (also via e-mail).
   - You must not use any data from the development split as training instances. You must not use any test instance in the training of the model (also not indirectly for model selection). Approaches that violate this data separation are disqualified.
 - Once the competition is over, we will release the gold labels and you will be able to determine results on various system variants you may have developed. We encourage you to report results on all of your systems (or system variants) in the system-description paper. However, we will ask you to clearly indicate the result of your official submission.
   - We will make the final submissions of the teams public at some point after the evaluation period.

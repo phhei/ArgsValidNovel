@@ -93,7 +93,7 @@ if __name__ == "__main__":
                 scores["{}_{}_{}_f1".format(aspect_key, prefix, cls)] = \
                     2*(scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] *
                         scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)]) /\
-                    max(1, scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] +
+                    max(1e-4, scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] +
                     scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)])
             scores["{}_{}_precision".format(aspect_key, prefix)] = \
                 sum([scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] for cls in considered_classes])/len(considered_classes)

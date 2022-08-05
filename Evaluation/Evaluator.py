@@ -1,3 +1,4 @@
+import sys
 from typing import Tuple
 
 import pandas
@@ -16,8 +17,15 @@ if __name__ == "__main__":
                                  help="The file with the ground truth labels")
     argument_parser.add_argument("prediction_file", type=Path, action="store",
                                  help="The file with the ground truth labels")
+    argument_parser.add_argument("--verbose", action="store_true", default=False,
+                                 help="If you want to have an extensive output with lot's of additional "
+                                      "scores/ metrics, set this param")
 
     args = argument_parser.parse_args()
+
+    if not args.verbose:
+        logger.remove()
+        logger.add(sink=sys.stdout, level="SUCCESS", colorize=False)
 
     logger.info("Reference: {} <> Predictions: {}", args.reference_file, args.prediction_file)
 
@@ -50,8 +58,8 @@ if __name__ == "__main__":
                                            if row["Topic-in-dev-split"] == "yes"],
                                     inplace=False),
     }
-    logger.info("Found following keys: {}",
-                " / ".join(map(lambda kv: "{}: {} rows".format(kv[0], len(kv[1])), df_checks.items())))
+    logger.debug("Found following keys: {}",
+                 " / ".join(map(lambda kv: "{}: {} rows".format(kv[0], len(kv[1])), df_checks.items())))
 
     scores = dict()
     for aspect in ["Validity", "Novelty", ("Validity", "Novelty")]:
@@ -88,18 +96,34 @@ if __name__ == "__main__":
                     )
                     retrieved_elements = numpy.sum(numpy.where(predicted == cls, 1, 0))
                     relevant_elements = numpy.sum(numpy.where(reference == cls, 1, 0))
-                scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] = true_positives/max(1., retrieved_elements)
-                scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)] = true_positives/max(1., relevant_elements)
+                scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] = \
+                    true_positives/max(1., retrieved_elements)
+                scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)] = \
+                    true_positives/max(1., relevant_elements)
                 scores["{}_{}_{}_f1".format(aspect_key, prefix, cls)] = \
                     2*(scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] *
                         scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)]) /\
                     max(1e-4, scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] +
                     scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)])
             scores["{}_{}_precision".format(aspect_key, prefix)] = \
-                sum([scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] for cls in considered_classes])/len(considered_classes)
+                sum([scores["{}_{}_{}_precision".format(aspect_key, prefix, cls)] for cls in considered_classes]) / \
+                len(considered_classes)
             scores["{}_{}_recall".format(aspect_key, prefix)] = \
-                sum([scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)] for cls in considered_classes]) / len(considered_classes)
+                sum([scores["{}_{}_{}_recall".format(aspect_key, prefix, cls)] for cls in considered_classes]) / \
+                len(considered_classes)
             scores["{}_{}_f1".format(aspect_key, prefix)] = \
-                sum([scores["{}_{}_{}_f1".format(aspect_key, prefix, cls)] for cls in considered_classes]) / len(considered_classes)
+                sum([scores["{}_{}_{}_f1".format(aspect_key, prefix, cls)] for cls in considered_classes]) / \
+                len(considered_classes)
 
-    logger.success("Calculated the scores: {}", pformat(object=scores, width=100, compact=False, sort_dicts=True))
+    logger.info("Calculated the scores: {}", pformat(object=scores, width=100, compact=False, sort_dicts=True))
+
+    if args.task == "A":
+        logger.success("macro F1 val: {} | macro F1 nov: {} | macro F1 both: {}",
+                       round(scores["Validity__f1"], 4),
+                       round(scores["Novelty__f1"], 4),
+                       round(scores["ValNov__f1"], 4))
+    else:
+        logger.success("macro F1 val: {} | macro F1 nov: {} | macro F1 avg: {}",
+                       round(scores["Validity__f1"], 4),
+                       round(scores["Novelty__f1"], 4),
+                       round((scores["Validity__f1"]+scores["Novelty__f1"])/2, 4))

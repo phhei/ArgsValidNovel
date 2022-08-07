@@ -12,6 +12,21 @@ Submission URL: **TBA**
 
 The Shared Task is running a non-blind review process. The title section of your manuscript should contain author names, email addresses and affiliation status of all team members given in the previous submission of the test prediction.
 
+### Further information writing a system description paper
+
+A system description paper should (at least) contain:
+
+1. Abstract
+2. Introduction
+3. Related work
+4. Task/ Data
+5. Description of your approach
+6. Experiments & Results
+   1. Please analyse your results and/ or do an error analysis
+   2. We provided a [metric script](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/Evaluation/Evaluator.py). By setting ``--verbose``, you get a bunch of possible interesting performance numbers, also including a separation into _in-topic_ (topic/ premises occurred already in the validation set in opposite to the conclusions) and _out-topic_ (completely novel topics, did not occur in the training/ validation data)
+7. Conclusion
+8. **_References_**
+
 ## Important Dates
 
 - Submission due: August 29, 2022

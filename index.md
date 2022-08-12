@@ -91,6 +91,10 @@ We consider the average of the _f1_macro_-score for validity and novelty.
 - 05.08.22: Final submission of team results on test data
 - (until) 12.08.22: Publication of overall results of the task
 
+### System Description Paper Submission
+
+Please finde more info [here](https://phhei.github.io/ArgsValidNovel/cfp)
+
 ### Terms and Conditions
 
 By participating in this task you agree to these terms and conditions. If, however, one or more of these conditions is a concern for you, email us, and we will consider if an exception can be made.

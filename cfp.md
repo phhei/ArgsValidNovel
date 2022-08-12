@@ -4,9 +4,11 @@ The shared task of the ArgMining 2022 invites the submission of system descripti
 
 ## Submission Information
 
-By default, we accept one type of papers: short papers (2 to 4 pages + references + appendix (optional)). All papers will be treated equally in the workshop proceedings. The workshop follows ACL’s policies for submission, review, and citation. Moreover, authors are expected to adhere to the ethical code set out in the ACL Code of Ethics. Submissions that violate any of the policies will be rejected without review.
+By default, we accept one type of papers: short papers (2 to 4 pages + references + appendix (optional)). All papers will be treated equally in the workshop proceedings. Moreover, authors are expected to adhere to the ethical code set out in the ACL Code of Ethics. Submissions that violate any of the policies will be rejected without review.
 
 Please use the COLING 2022 style sheets for formatting your paper: https://coling2022.org/
+
+Please use the CAMERA-READY, non-anonymized option.
 
 Submission address: [email](mailto:argmining22_shared_task-organizers@cl.uni-heidelberg.de)
 

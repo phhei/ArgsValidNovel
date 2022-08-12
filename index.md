@@ -45,6 +45,7 @@ Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-d
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
 - Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test-without-labels.csv) => [submit](https://phhei.github.io/ArgsValidNovel/submission)
+- (**New**) Test: [with labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_test.csv)
 
 **Evaluation:** we consider the _f1_macro_-score recognizing instances as correctly predicted only if validity and novelty are both correctly predicted.
 
@@ -74,6 +75,7 @@ Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-d
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_dev.csv)
 - Test: [without labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test-without-labels.csv) => [submit](https://phhei.github.io/ArgsValidNovel/submission)
+- (**New**) Test: [with labels](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_test.csv)
 
 **Evaluation:** We require following format for each instance for each aspect (validity/ novelty).
 
@@ -83,18 +85,11 @@ Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-d
 
 We consider the average of the _f1_macro_-score for validity and novelty.
 
----
-
-## Organisation & Submission
-
-_coming soon_
-
 ### Timeline
 
 - 01.08.22: Test data without labels is released
 - 05.08.22: Final submission of team results on test data
 - (until) 12.08.22: Publication of overall results of the task
-- 05.09.22: Paper for proceedings with task description ready
 
 ### Terms and Conditions
 

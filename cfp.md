@@ -1,6 +1,6 @@
 # Call for papers (system description papers)
 
-The shared task of the ArgMining 2022 invites the submission of short papers on system/ approach descriptions to achieve either [subtask A or B](https://phhei.github.io/ArgsValidNovel/). A submission of such a paper requires a [submission of test predictions according to our test production submission procedure](https://phhei.github.io/ArgsValidNovel/submission) beforehand. The deadline is already expired.
+The shared task of the ArgMining 2022 invites the submission of system description short papers from teams that have particpated.
 
 ## Submission Information
 
@@ -22,7 +22,7 @@ Structure of a system description could look as follows:
 4. Task/Data
 5. Description of your approach
 6. Experiments & Results
-   1. Please analyse your results and/ or do an error analysis
+   1. E.g., analyse your results and/or do an error analysis
    2. We provided a [metric script](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/Evaluation/Evaluator.py). By setting ``--verbose``, you get a bunch of possible interesting performance numbers, also including a separation into _in-topic_ (topic/ premises occurred already in the validation set in opposite to the conclusions) and _out-topic_ (completely novel topics, did not occur in the training/ validation data). The tast data is now also released.
 7. Conclusion
 (8. References)

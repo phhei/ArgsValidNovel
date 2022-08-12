@@ -113,7 +113,35 @@ By participating in this task you agree to these terms and conditions. If, howev
 
 ## Results
 
-_coming soon_
+Table entries are ranked with main evaluation metric.
+
+### Task A
+
+| Team            | mF1 Valid&Novel | mF1 Valid | mF1 Novel |
+| --------------- | --------------- | --------- | --------- |
+| CLTeamL-3       | 45.16           | 74.64     | 61.75     |
+| AXiS@EdUni-1    | 43.27           | 69.8      | 62.43     |
+| ACCEPT-1        | 43.13           | 59.2      | 70.0      |
+| CLTeamL-5       | 43.1            | 74.64     | 58.95     |
+| AXiS@EdUni-2    | 39.74           | 66.69     | 61.63     |
+| CLTeamL-2       | 38.7            | 65.03     | 61.75     |
+| CLTeamL-1       | 35.32           | 74.64     | 46.07     |
+| CLTeamL-4       | 33.11           | 56.74     | 58.95     |
+| ACCEPT-3        | 30.13           | 58.63     | 56.81     |
+| ACCEPT-2        | 29.92           | 56.8      | 48.1      |
+| NLP@UIT         | 25.89           | 61.72     | 43.36     |
+| RoBERTa         | 23.9            | 59.96     | 36.12     |
+| CSS             | 21.08           | 51.61     | 43.75     |
+| Harshad         | 17.35           | 56.31     | 39.0      |
+
+### Task B
+
+| Team          | mmF1  | mF1 Valid | mF1 Novel |
+| ------------- | ----- | --------- | --------- |
+| NLP@UIT       | 41.5  | 44.6      | 38.39     |
+| AXiS@EdUni    | 29.16 | 32.47     | 25.86     |
+| RoBERTa       | 21.46 | 19.82     | 23.09     |
+
 
 ## Task Organizers
 

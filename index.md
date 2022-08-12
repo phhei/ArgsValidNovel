@@ -131,11 +131,11 @@ Table entries are ranked with main evaluation metric.
 
 ### Task B
 
-| Team          | mmF1  | mF1 Valid | mF1 Novel |
-| ------------- | ----- | --------- | --------- |
-| NLP@UIT       | 41.5  | 44.6      | 38.39     |
-| AXiS@EdUni    | 29.16 | 32.47     | 25.86     |
-| RoBERTa       | 21.46 | 19.82     | 23.09     |
+| Team          | mean of mF1 Val & mF1 Nov  | mF1 Valid | mF1 Novel |
+| ------------- | -------------------------- | --------- | --------- |
+| NLP@UIT       | 41.5                       | 44.6      | 38.39     |
+| AXiS@EdUni    | 29.16                      | 32.47     | 25.86     |
+| RoBERTa       | 21.46                      | 19.82     | 23.09     |
 
 
 ## Task Organizers

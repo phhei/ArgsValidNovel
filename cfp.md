@@ -25,7 +25,8 @@ Structure of a system description could look as follows:
    1. E.g., analyse your results and/or do an error analysis
    2. We provided a [metric script](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/Evaluation/Evaluator.py). By setting ``--verbose``, you get a bunch of possible interesting performance numbers, also including a separation into _in-topic_ (topic/ premises occurred already in the validation set in opposite to the conclusions) and _out-topic_ (completely novel topics, did not occur in the training/ validation data). The tast data is now also released.
 7. Conclusion
-(8. References)
+
+(And References)
 
 ## Important Dates
 

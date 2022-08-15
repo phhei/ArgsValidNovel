@@ -134,7 +134,7 @@ Table entries are ranked with main evaluation metric.
 | CSS             | 21.08           | 51.61     | 43.75     |
 | Harshad         | 17.35           | 56.31     | 39.0      |
 
-*CSS*(\*): post deadline predictions of CSS, after a output formatting bug was detected and corrected
+*CSS*(\*): post deadline submission of CSS, after a output formatting bug was detected and corrected
 
 ### Task B
 

@@ -122,6 +122,7 @@ Table entries are ranked with main evaluation metric.
 | AXiS@EdUni-1    | 43.27           | 69.8      | 62.43     |
 | ACCEPT-1        | 43.13           | 59.2      | 70.0      |
 | CLTeamL-5       | 43.1            | 74.64     | 58.95     |
+| *CSS*(\*)       | 42.4            | 70.76     | 59.86     |
 | AXiS@EdUni-2    | 39.74           | 66.69     | 61.63     |
 | CLTeamL-2       | 38.7            | 65.03     | 61.75     |
 | CLTeamL-1       | 35.32           | 74.64     | 46.07     |
@@ -132,6 +133,8 @@ Table entries are ranked with main evaluation metric.
 | RoBERTa         | 23.9            | 59.96     | 36.12     |
 | CSS             | 21.08           | 51.61     | 43.75     |
 | Harshad         | 17.35           | 56.31     | 39.0      |
+
+*CSS*(\*): post deadline predictions of CSS, after a output formatting bug was detected and corrected
 
 ### Task B
 

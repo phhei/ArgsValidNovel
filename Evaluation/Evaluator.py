@@ -15,8 +15,9 @@ if __name__ == "__main__":
     argument_parser.add_argument("task", choices=["A", "B"], type=str)
     argument_parser.add_argument("reference_file", type=Path, action="store",
                                  help="The file with the ground truth labels")
-    argument_parser.add_argument("prediction_file", type=Path, action="store",
-                                 help="The file with the ground truth labels")
+    argument_parser.add_argument("prediction_file", type=Path, action="store", nargs="?", default=None,
+                                 help="The file with the ground truth labels "
+                                      "(if they are not already given in the reference file)")
     argument_parser.add_argument("--verbose", action="store_true", default=False,
                                  help="If you want to have an extensive output with lot's of additional "
                                       "scores/ metrics, set this param")
@@ -32,22 +33,41 @@ if __name__ == "__main__":
     classes = [-1, 1] if args.task == "A" else [-1, 0, 1]
 
     df_reference = pandas.read_csv(str(args.reference_file), encoding="utf8")
-    df_predicted = pandas.read_csv(str(args.prediction_file), encoding="utf8")
-
-    keys = ["topic", "Premise", "Conclusion"] if args.task == "A" else \
-        ["topic", "Premise", "Conclusion 1", "Conclusion 2"]
-    joined_df = df_reference.set_index(keys).join(other=df_predicted.set_index(keys), how="inner")
-
-    if len(joined_df) < (520 if args.task == "A" else 283):
-        logger.warning("The prediction file was wrongly encoded/ composed, "
-                       "collected only {} matches between reference and prediction", len(joined_df))
+    if args.prediction_file is None:
+        logger.debug("I assume, the {} of \"{}\" contain the predictions, too...",
+                     len(df_reference), args.reference_file)
         joined_df = df_reference
+    else:
+        df_predicted = pandas.read_csv(str(args.prediction_file), encoding="utf8")
+
+        keys = ["topic", "Premise", "Conclusion"] if args.task == "A" else \
+            ["topic", "Premise", "Conclusion 1", "Conclusion 2"]
+        joined_df = df_reference.set_index(keys).join(other=df_predicted.set_index(keys), how="inner")
+
+        if len(joined_df) < (520 if args.task == "A" else 283):
+            logger.warning("The prediction file was wrongly encoded/ composed, "
+                           "collected only {} matches between reference and prediction", len(joined_df))
+            joined_df = df_reference
+            try:
+                joined_df["predicted validity"] = df_reference["predicted validity"]
+                joined_df["predicted novelty"] = df_reference["predicted novelty"]
+            except KeyError:
+                logger.opt(exception=True).error("the prediction file ({}) is in the wrong format - reject!",
+                                                 args.prediction_file.absolute())
+
+    for aspect in ["Validity", "Novelty"]:
         try:
-            joined_df["predicted validity"] = df_reference["predicted validity"]
-            joined_df["predicted novelty"] = df_reference["predicted novelty"]
-        except Exception:
-            logger.opt(exception=True).error("the prediction file ({}) is in the wrong format - reject!",
-                                             args.prediction_file.absolute())
+            joined_df["predicted {}".format(aspect.lower())] = \
+                [classes[int(y*len(classes))] for sid, row in joined_df.iterrows()
+                 if (y := row["predicted {}".format(aspect.lower())]) not in classes]
+        except IndexError:
+            logger.opt(exception=True).error(
+                "Your given predictions ({}) are (partially) not discrete, hence, not in the classes {}. "
+                "However, instead of expected floating numbers between 0 and 1 we found numbers below 0 or above 1. "
+                "Hence, we can't convert the continuous predictions properly.",
+                args.reference_file if args.prediction_file is None else args.prediction_file,
+                "/".join(map(lambda c: str(c), classes))
+            )
 
     df_checks = {
         "": joined_df,

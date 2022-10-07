@@ -58,8 +58,8 @@ if __name__ == "__main__":
     for aspect in ["Validity", "Novelty"]:
         try:
             joined_df["predicted {}".format(aspect.lower())] = \
-                [classes[int(y*len(classes))] for sid, row in joined_df.iterrows()
-                 if (y := row["predicted {}".format(aspect.lower())]) not in classes]
+                [classes[int(y*len(classes))] if (y := row["predicted {}".format(aspect.lower())]) not in classes else y
+                 for sid, row in joined_df.iterrows()]
         except IndexError:
             logger.opt(exception=True).error(
                 "Your given predictions ({}) are (partially) not discrete, hence, not in the classes {}. "

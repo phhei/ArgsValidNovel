@@ -41,6 +41,8 @@ Premise: The notion of man's dominion over animals need not be thought of as a b
 
 Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-description) beforehand.
 
+> If you use the data, please cite our [overview paper](https://aclanthology.org/2022.argmining-1.7/).
+
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
 - Dev: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskA_dev.csv)
@@ -70,6 +72,8 @@ Premise: These large ships release significant pollution into the oceans, and ca
 #### Datasets & Evaluation
 
 Please read the [Data Description](https://phhei.github.io/ArgsValidNovel/data-description) beforehand.
+
+> If you use the data, please cite our [overview paper](https://aclanthology.org/2022.argmining-1.7/).
 
 - Train: [here](https://github.com/phhei/ArgsValidNovel/blob/gh-pages/TaskB_train.csv)
   - you're allowed to extend the train set with further (synthetic) samples. However, if you do that, you have to describe/ provide the algorithm which extends the training set. This algorithm must be automatically executable without any human interaction (hence, without further manual annotation/ manual user feedback)
